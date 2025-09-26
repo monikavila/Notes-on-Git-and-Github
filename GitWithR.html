@@ -60,9 +60,16 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 <ol start="2" type="1">
-<li>Create a new project in RStudio with Version Control.</li>
-<li>En R podemos usar el paquete usethis.</li>
+<li>Create a new project in RStudio.</li>
+<li>To initialize a git repository, we use <code>usethis::use_git()</code></li>
+<li>Add files to the repository.</li>
+<li>Use the Git pane, there we first click Add,</li>
+<li>Then Commit by opening the Commit window, write the commit message. You can verify the changes there.Then click Commit.</li>
+<li>Now, we initialize a GitHub repository with <code>usethis::use_github()</code>. This will create a GitHub repository.</li>
+<li>Changes that have been modified in Github, we use Pull in the Git pane.</li>
+<li>If we added files to the local repository, commit, and then push.</li>
 </ol>
+<p>Important: Always verify that local and remote repository have the same documents, and all documents are actualized. For this, always do pull and push before start working again in your repository.</p>
 </section>
 
 </main>

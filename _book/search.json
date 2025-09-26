@@ -183,11 +183,11 @@
   {
     "objectID": "Commit.html",
     "href": "Commit.html",
-    "title": "4  Git commit",
+    "title": "5  Git commit",
     "section": "",
-    "text": "4.1 Commit message best practices",
+    "text": "5.1 Commit message best practices",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git commit</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Git commit</span>"
     ]
   },
   {
@@ -233,11 +233,11 @@
   {
     "objectID": "Commit.html#commit-message-best-practices",
     "href": "Commit.html#commit-message-best-practices",
-    "title": "4  Git commit",
+    "title": "5  Git commit",
     "section": "",
     "text": "Don’t end with a period\nLess than 50 words\nActive voice",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git commit</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Git commit</span>"
     ]
   },
   {
@@ -253,32 +253,32 @@
   {
     "objectID": "FileChanges.html",
     "href": "FileChanges.html",
-    "title": "3  Changes to code",
+    "title": "4  Changes to code",
     "section": "",
     "text": "To change code or a file, one needs to:\n\nGo to the branch used for development. Important: not the main branch containing the deployed code!\n\n\nIn the command line:\n\ncd \"name of local git repository\"\ngit checkout \"name of branch\"\nnano \"file name to change\"\n\nIn Github:\n\nChoose the branch for development:\n\n\n\nSelect file\nClick pencil icon\n\nMake changes to the file.",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Changes to code</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Changes to code</span>"
     ]
   },
   {
     "objectID": "MergePullRequest.html",
     "href": "MergePullRequest.html",
-    "title": "6  Merge a pull request",
+    "title": "7  Merge a pull request",
     "section": "",
     "text": "To merge a committed code into the main branch:\n\nOn Github:\n\nClick Merge Pull Request\nClick Confirm merge\nDelete obsolete branch\n\nOn command line:",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Merge a pull request</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Merge a pull request</span>"
     ]
   },
   {
     "objectID": "Cloning.html",
     "href": "Cloning.html",
-    "title": "7  Cloning",
+    "title": "10  Cloning",
     "section": "",
     "text": "Cloning allows you to copy an existing remote repository in your local computer. This can be done by following the process:\n\nIn Github, go to the repository of interest and click Code, and copy the HTTPS link.\n\nOn the terminal, go to the desired directory where you want to host the cloned repository.\n\ngit clone \"the copied HTTPS\"",
     "crumbs": [
       "Workflow",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Cloning</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Cloning</span>"
     ]
   },
   {
@@ -407,6 +407,16 @@
     "text": "New project: you start from scratch\n\nOption 1\n\nIn the terminal, go to the desired directory where you want to host your local repository using cd.\nInitialize a local Git repository git init . This allows Git to track changes.\nIf there are files you do not want to keep track of, create a .gitignore file for your repository using touch .gitignore . You can modify this file on the terminal with nano .gitignore . This step is important.\nMove selected files to an Staging Area using git add .\nMake an initial commit git commit -m \"message\" .\nCreate a blank remote repository on Github.\nLink local repository to the remote repository git remote add origin URL_github_repository .\nPush files from local repository to the remote repository git push --all origin .\nOther users can now clone the remote repository.\nOthers users start working on the repository by creating branches\n\n\n\nOption 2 (My idea)\n\nInitialize a remote Git repository\nClone the remote Git repository\nSelect files that you want to keep tracked\nMove selected files to an Staging Area\nMake an initial commit\nPush files from local repository to the remote repository",
     "crumbs": [
       "Workflow"
+    ]
+  },
+  {
+    "objectID": "WorkStrategies.html",
+    "href": "WorkStrategies.html",
+    "title": "17  Work strategies",
+    "section": "",
+    "text": "pull before starting to work. This guarantees. that local and remote repository are synchronized.\nUse branches.",
+    "crumbs": [
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Work strategies</span>"
     ]
   }
 ]
