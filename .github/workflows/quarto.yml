@@ -1,0 +1,26 @@
+name: Render Quarto Book
+
+on:
+  push:
+    branches:
+      - main  # Runs whenever you push to main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Render Quarto book
+        uses: quarto-dev/quarto-actions@v2
+        with:
+          command: render
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_book  # <-- your output folder
+
