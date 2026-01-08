@@ -2,16 +2,15 @@ name: Render Quarto Book
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
+# Fixes the 'Exit Code 128' error
 permissions:
   contents: write
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -19,7 +18,7 @@ jobs:
       - name: Install Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
-          # This installs the LaTeX engine needed for PDFs
+          # Fixes 'No TeX installation detected'
           tinytex: true
 
       - name: Render Quarto Project
