@@ -37,6 +37,8 @@ format:
     theme: cosmo
   pdf:
     documentclass: scrreprt
+    pdf-engine: lualatex
 
-editor: visual
-
+# This is highly recommended so GitHub doesn't crash on code chunks
+execute:
+  freeze: auto
