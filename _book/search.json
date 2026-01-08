@@ -267,6 +267,7 @@
     "section": "",
     "text": "To merge a committed code into the main branch:\n\nOn Github:\n\nClick Merge Pull Request\nClick Confirm merge\nDelete obsolete branch\n\nOn command line:",
     "crumbs": [
+      "Basics",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Merge a pull request</span>"
     ]
   },

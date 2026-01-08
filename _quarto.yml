@@ -7,13 +7,15 @@ book:
   date: "6/15/2025"
   chapters:
     - index.qmd
-    - GitGithub.qmd
-    - ConfigurarGit.qmd
-    - GitBranches.qmd
-    - FileChanges.qmd
-    - Commit.qmd
-    - PullRequest.qmd
-    - MergePullRequest.qmd
+    - part: "Basics"
+      chapters:
+        - GitGithub.qmd
+        - ConfigurarGit.qmd
+        - GitBranches.qmd
+        - FileChanges.qmd
+        - Commit.qmd
+        - PullRequest.qmd
+        - MergePullRequest.qmd
     - part: Workflow.qmd
       chapters:   
       - WorkflowWithCommands.qmd
