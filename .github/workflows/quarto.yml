@@ -5,18 +5,25 @@ on:
     branches:
       - main
 
+# This fixes the "Exit Code 128" (Permission Denied) error
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-        with:
-          command: render
+        # Removed 'command: render' from here
+
+      - name: Render Quarto Project
+        # This step actually runs the "quarto render" command
+        uses: quarto-dev/quarto-actions/render@v2
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
