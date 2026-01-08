@@ -16,6 +16,7 @@
     "section": "",
     "text": "1.1 Version control\nVersion control allows to control any changes done to a code. There are different types of version control systems, but the most useful ones are the distributed ones.",
     "crumbs": [
+      "Basics",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Git and Github</span>"
     ]
   },
@@ -26,6 +27,7 @@
     "section": "1.2 Git",
     "text": "1.2 Git\nWhat is Git:\n\nIt is an free and open-source software distributed under the GNU license.\nIt is a distributed version control system (DVCS): this means that any user can have a copy of a project, make changes locally and then sync changes with the main remote project.\n\nWhat does it do: - It supports branching strategy.\nBrackground: was developed in 2005 to satisfy Linux needs of version-control.",
     "crumbs": [
+      "Basics",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Git and Github</span>"
     ]
   },
@@ -36,6 +38,7 @@
     "section": "1.3 Github",
     "text": "1.3 Github\nIt is a host service for Git repositories.",
     "crumbs": [
+      "Basics",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Git and Github</span>"
     ]
   },
@@ -46,6 +49,7 @@
     "section": "1.4 Important terms to learn",
     "text": "1.4 Important terms to learn\n\nSSH (secure shell) protocol: method to secure remote login.\nRepository: contains the project folders that are set uo for version control.\nFork: copy of a repository\nPull request: is a request to someone to review and approve your changes before they become final.\nWorking directory: contains files associated to a git repository\nCommit: a snapshot of the current state of a project\nBranch: is a separate line of development that allows you to work independently on your changes.\nMerging: combines changes from one branch to another.\nCloning: creates a local copy of a remote git repository",
     "crumbs": [
+      "Basics",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Git and Github</span>"
     ]
   },
@@ -56,6 +60,7 @@
     "section": "",
     "text": "Install Git in your computer (Set the initial configuration in your computer):\n\n\nIn Rstudio:\n\ninstall.packages(\"usethis\")\nSet your username and email: usethis::use_git_config(user.name = \"x\",user.email = \"x\")\nConfigure your personal access token:\n\nCreate the token with usethis::create_github_token()\nSave the token in your computer with gitcreds::gitcreds_set()\n\nVaccinate your Git installation with usethis::git_vaccinate()\n\n\n\nCheck the initial configuration of Git in your computer.\n\n\nTerminal: git config --list\nR: usethis::git_sitprep() You will need to set your user name and provide a token.\nThe token is obtained from GitHub &gt; Settings &gt; Developer settings &gt; Personal access tokens &gt; Tokens (Classic) &gt; Generate new token.\n\n\nDifferent ways to interact with Git:\n\n\nTerminal\nGitHub desktop\nR",
     "crumbs": [
+      "Basics",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Configurar Git</span>"
     ]
   },
@@ -66,6 +71,7 @@
     "section": "",
     "text": "3.1 Main branch\nGit branches store all files in Github. It can be thought as parallel copy of a repository.\nThe main branch stores the deployable code.",
     "crumbs": [
+      "Basics",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Git branches</span>"
     ]
   },
@@ -76,6 +82,7 @@
     "section": "3.2 Other branches",
     "text": "3.2 Other branches\nWhen you plan to change the code:\n\nCreate a new branch:\n\n\nCommand line: in the local repository of interest (previously you have changed to the local repository using cd and make sure that the local repository is a git repository which means that you have used git init in the directory of interest), use git checkout -b \"name of branch\". This new branch is a exact copy of the original branch.\nGithub: in the repository of interest, go to tab “master”, and fill in the space that indicates “Find or create a branch”\n\n\n\nWork on the new branch. Once the new code is finished, we have two branches: the original and the copy.\nWhen both branches are ready to join, the code of each branch is called the tip of each branch.\nMerge the branches: the two tips of the branch are merged into a new tip that belongs to the original branch that contains the deployable branch.\n\n # Git Branching Workflow\n\nClone the repository git clone URL\nCreate branch git branch BRANCH_NAME\nSwitch to the new branch using git checkout BRANCH_NAME\nModify the targeted file\nCheck modifications using git status\nStage changes using git add FILE_NAME\nCommit changes using git commit -m \"Message\"\nSwitch back to the main branch using git checkout main\nMerge branches using git merge\nMake the changes accessible to the remote repository using git push -u origin main\nCheck if changes have been done using git status",
     "crumbs": [
+      "Basics",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Git branches</span>"
     ]
   },
@@ -86,6 +93,7 @@
     "section": "",
     "text": "To change code or a file, one needs to:\n\nGo to the branch used for development. Important: not the main branch containing the deployed code!\n\n\nIn the command line:\n\ncd \"name of local git repository\"\ngit checkout \"name of branch\"\nnano \"file name to change\"\n\nIn Github:\n\nChoose the branch for development:\n\n\n\nSelect file\nClick pencil icon\n\nMake changes to the file.",
     "crumbs": [
+      "Basics",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Changes to code</span>"
     ]
   },
@@ -96,6 +104,7 @@
     "section": "",
     "text": "5.1 Commit message best practices",
     "crumbs": [
+      "Basics",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Git commit</span>"
     ]
   },
@@ -106,6 +115,7 @@
     "section": "",
     "text": "Don’t end with a period\nLess than 50 words\nActive voice",
     "crumbs": [
+      "Basics",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Git commit</span>"
     ]
   },
@@ -116,6 +126,7 @@
     "section": "",
     "text": "A pull request makes available the committed changes available to others for review and use.\nCan follow any commit.\nCan target any user.\nThere is always a log file of the pull that registers the user who approved the pull.\nIt allows to merge a new branch with the main one.\n\nTo make a pull request: - On command line: -\n\nOn Github:\n\nGo to pull request\n\nSelect new pull request\n\nSelect the new branch from the compare box\nSource: IBM Git coursera course\nConfirm that the changes are the ones that you want to asses\nAdd title and description of request\nClick Create pull request\n\n\nThen code is reviewed and approved\nApproved code in merged in the main branch",
     "crumbs": [
+      "Basics",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Pull request</span>"
     ]
   },
@@ -126,6 +137,7 @@
     "section": "",
     "text": "To merge a committed code into the main branch:\n\nOn Github:\n\nClick Merge Pull Request\nClick Confirm merge\nDelete obsolete branch\n\nOn command line:",
     "crumbs": [
+      "Basics",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Merge a pull request</span>"
     ]
   },
