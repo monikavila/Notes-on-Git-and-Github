@@ -1,11 +1,10 @@
-
-
 # Git commit
 
-- A commit is a saved change of files.  For instance, we changed a file and we want to save it.  In word, we would click save.  In Git, we need to use commit. 
-- Important: we need to add a commit message which has to describe correctly the changes done. 
+-   A commit is a saved change of files. For instance, we changed a file and we want to save it. In word, we would click save. In Git, we need to use commit.
+-   Important: we need to add a commit message which has to describe correctly the changes done.
 -   Commit changes to the file:
     -   In the terminal (assuming you are already in the directory of the local git rpository):
+
         -   `git add .` (This allows to upload the file to a staging area)
         -   `git commit -m "message"`
 
@@ -15,6 +14,6 @@
 
 ## Commit message best practices
 
-- Don't end with a period
-- Less than 50 words
-- Active voice
+-   Don't end with a period
+-   Less than 50 words
+-   Active voice

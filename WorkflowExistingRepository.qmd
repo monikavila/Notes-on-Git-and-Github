@@ -1,0 +1,122 @@
+# Workflow for an existing local repository that is synchronized with a remote repository on Github
+
+## Solo work 
+### Repository that was not synchronized and not updated using a proper Git wrokflow
+#### Part 1: Verify that the local repository is connected to Github, and the structure of the repository
+1.  Check that the local repository is connected to Github:
+
+    `git remote -v`
+
+    If it is connected, we need to see an output:
+
+    origin <https://github.com/monikavila/Github.git> (fetch)
+
+    origin <https://github.com/monikavila/Github.git> (push)
+
+2. Check the current branch 
+
+    `git branch` 
+
+
+#### Part 2: Update repository locally and remotelly 
+
+1. Check status 
+    `git status` 
+
+2. Commit local changes 
+
+    `git add .` 
+    `git commit -m "Updating all the changes in one"`
+
+    Note: Ideally, one should commit each change separately to have meaningful commit messages.
+
+3. Pull changes 
+
+    ` git pull`
+
+4. Push changes 
+    `git push`
+
+
+### Repository that is constantly synchronized 
+####  Update repository locally and remotelly 
+
+1. Check status 
+    `git status` 
+
+2. Commit local changes 
+
+    `git add .` 
+    `git commit -m "Updating all the changes in one"`
+
+    Note: Ideally, one should commit each change separately to have meaningful commit messages.
+
+3. Pull changes 
+
+    ` git pull`
+
+4. Push changes 
+    `git push`
+
+
+## Team work 
+### Repository that was not synchronized and not updated using a proper Git wrokflow
+#### Part 1: Verify that the local repository is connected to Github, and the structure of the repository
+1.  Check that the local repository is connected to Github:
+
+    `git remote -v`
+
+    If it is connected, we need to see an output:
+
+    origin <https://github.com/monikavila/Github.git> (fetch)
+
+    origin <https://github.com/monikavila/Github.git> (push)
+
+2. Check the current branch 
+
+    `git branch` 
+
+
+#### Part 2: Update repository locally and remotelly 
+
+1. Check status 
+    `git status` 
+
+2. Pull changes 
+
+    ` git pull`
+
+
+3. Commit local changes 
+
+    `git add .` 
+    `git commit -m "Updating all the changes in one"`
+
+    Note: Ideally, one should commit each change separately to have meaningful commit messages.
+
+
+4. Push changes 
+    `git push`
+
+
+### Repository that is constantly synchronized 
+####  Update repository locally and remotelly 
+
+1. Check status 
+    `git status` 
+
+2. Pull changes 
+
+    ` git pull`
+
+
+3. Commit local changes 
+
+    `git add .` 
+    `git commit -m "Updating all the changes in one"`
+
+    Note: Ideally, one should commit each change separately to have meaningful commit messages.
+
+
+4. Push changes 
+    `git push`

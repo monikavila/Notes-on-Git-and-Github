@@ -193,11 +193,11 @@
   {
     "objectID": "GithubProjectManagement.html",
     "href": "GithubProjectManagement.html",
-    "title": "7  Github projects",
+    "title": "14  Github projects",
     "section": "",
     "text": "The roles are:\n\nDeveloper\n\nUses the following commands:\n\n\ngit clone\ngit pull and git fetch\ngit push\n\nIntegrator\nUses the commands:\n\ngit clone\ngit pull\ngit merge\n\nAdministrator\n\nIn charge of:\n\nManaging communities\nManaging servers\ns",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Github projects</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Github projects</span>"
     ]
   },
   {
@@ -215,7 +215,7 @@
     "href": "GitBranches.html",
     "title": "3  Git branches",
     "section": "",
-    "text": "3.1 Main branch\nThe main branch stores the deployable code.",
+    "text": "3.1 Main branch\nGit branches store all files in Github. It can be thought as parallel copy of a repository.\nThe main branch stores the deployable code.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Git branches</span>"
     ]
@@ -284,23 +284,23 @@
   {
     "objectID": "WorkflowWithCommands.html",
     "href": "WorkflowWithCommands.html",
-    "title": "7  Workflow using commands",
+    "title": "8  Workflow using commands",
     "section": "",
-    "text": "7.1 New Project\nSource: IBM coursera course on Introduction to Git and Github",
+    "text": "8.1 New Project\nSource: IBM coursera course on Introduction to Git and Github",
     "crumbs": [
       "Workflow",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Workflow using commands</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Workflow using commands</span>"
     ]
   },
   {
     "objectID": "WorkflowWithCommands.html#new-project",
     "href": "WorkflowWithCommands.html#new-project",
-    "title": "7  Workflow using commands",
+    "title": "8  Workflow using commands",
     "section": "",
     "text": "Create a local directory using mkdir\nNavigate to the directory cd\nInitialize a local repository using git init in the target local directory\nAdd the files that you want to control version to the local repository\nAdd the files to the staging are using git add name_files\nCommit the files to the main branch using git commit -m \"message describing the commit\"\nReview the commit history using git log\nTo make changes without causing problems in the main branch, create a new branch using git branch name_child_branch\nTo switch to the new branch use git checkout name_child_branch\nMake changes on the targeted file in the new branch.\nAdd the changed files to the staging area using git add name_file_to_change .\nCommit the changes using git commit -m \"commit_message\" . Here it is important to specify in the commit message that changes are done in the name of the branch\nVerify the commit using commit log\nTo see the status of changes commit status\nPush commit git push ???\nMerge the changes using git merge name_child_branch\nDelete the child branch using git branch -d name_child_branch",
     "crumbs": [
       "Workflow",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Workflow using commands</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Workflow using commands</span>"
     ]
   },
   {
@@ -317,12 +317,12 @@
   {
     "objectID": "WorkflowWithCommands.html#existing-project",
     "href": "WorkflowWithCommands.html#existing-project",
-    "title": "7  Workflow using commands",
-    "section": "7.2 Existing Project",
-    "text": "7.2 Existing Project\n\nClone the remote repository using git clone url_direction\nChange to the directory that was cloned using cd\nCreate a new branch to work on a target change git branch name_new_branch\nChange of branch using git checkout name_branch\nThen go to the file to modify. Modify it\nAdd changes to the staging are using git add filename\nCommit changes using git commit -m message\nMerge branches\nSwitch back to main git checkout main\nMerge changes using git merge childbranch\nMake changes accessible in the remote repository git push -u origin main",
+    "title": "8  Workflow using commands",
+    "section": "8.2 Existing Project",
+    "text": "8.2 Existing Project\n\nClone the remote repository using git clone url_direction\nChange to the directory that was cloned using cd\nCreate a new branch to work on a target change git branch name_new_branch\nChange of branch using git checkout name_branch\nThen go to the file to modify. Modify it\nAdd changes to the staging are using git add filename\nCommit changes using git commit -m message\nMerge branches\nSwitch back to main git checkout main\nMerge changes using git merge childbranch\nMake changes accessible in the remote repository git push -u origin main",
     "crumbs": [
       "Workflow",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Workflow using commands</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Workflow using commands</span>"
     ]
   },
   {
@@ -352,7 +352,7 @@
     "href": "BranchingWorkflow.html",
     "title": "9  Git Branching Workflow",
     "section": "",
-    "text": "Clone the repository git clone URL\nCreate a new branch, you can use git branch BRANCH_NAME. But you can better use git checkout -b BRANC_NAME, this will create and change automatially to the new branch.\nSwitch to the new branch using git checkout BRANCH_NAME\nModify the targeted file\nCheck modifications using git status\nStage changes using git add FILE_NAME\nCommit changes using git commit -m \"Message\"\n\n7.5 Push the changes to the target branch git push -u origin Target_branch_name. This step is important to push the branch that was created to make the changes to GitHub.\n\nSwitch back to the main branch using git checkout main\nMerge branches using git merge BRANCH_FORCHANGES_NAME\nMake the changes accessible to the remote repository using git push -u origin main\nCheck if changes have been done using git status\nNow you can go to GitHub and check that you have three branches.\nIn GitHub you can ask for a pull request",
+    "text": "9.1 Workflow 1: merge branches first locally and then push to the remote\n7.5 Push the changes to the target branch git push -u origin Target_branch_name. This step is important to push the branch that was created to make the changes to GitHub.",
     "crumbs": [
       "Workflow",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Git Branching Workflow</span>"
@@ -417,6 +417,72 @@
     "text": "pull before starting to work. This guarantees. that local and remote repository are synchronized.\nUse branches.",
     "crumbs": [
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Work strategies</span>"
+    ]
+  },
+  {
+    "objectID": "WorkflowCreateGitGithubRepo.html",
+    "href": "WorkflowCreateGitGithubRepo.html",
+    "title": "13  Creating a new repository in Git and Github",
+    "section": "",
+    "text": "Navigate to the direcory that will host the local repository.\nIn the terminal tab git init -b main\nAdd a gitignore file using touch .gitignore\nStage files added to the repo git add .\nCommit the files git commit -m \"Initial commit\"\nCreate a GitHub repository using on GitHub without README and .gitignore files.\nLink the local repository to the remote repository using git remote add origin URL_GITHUB_REPOSITORY_TO_LINK\nVerify that the remote was set up correctly using git remote -v\nPush the changes in the local repository to the remote one by running the comand git push -u origin main\nVerify that your local branch is up to date with the remote one by git fetch git status\nTo create a new branch git checkout -b NAME_NEW_BRANCH\nTo push the local branch to the remote git push -u origin NAME_NEW_BRANCH\nTo pull the remote branch to the local one -u origin\nMerge branches in Github using Pull Requests.\nTo delete a local branch use git branch -d NAME_BRANCH",
+    "crumbs": [
+      "Workflow",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Creating a new repository in Git and Github</span>"
+    ]
+  },
+  {
+    "objectID": "BranchingWorkflow.html#workflow-1-merge-branches-first-locally-and-then-push-to-the-remote",
+    "href": "BranchingWorkflow.html#workflow-1-merge-branches-first-locally-and-then-push-to-the-remote",
+    "title": "9  Git Branching Workflow",
+    "section": "",
+    "text": "Clone the repository git clone URL\nCreate a new branch, you can use git branch BRANCH_NAME. But you can better use git checkout -b BRANC_NAME, this will create and change automatially to the new branch.\nSwitch to the new branch using git checkout BRANCH_NAME\nModify the targeted file\nCheck modifications using git status\nStage changes using git add FILE_NAME\nCommit changes using git commit -m \"Message\"\n\n\n\nSwitch back to the main branch using git checkout main\nMerge branches using git merge BRANCH_FORCHANGES_NAME\nMake the changes accessible to the remote repository using git push -u origin main\nCheck if changes have been done using git status\nNow you can go to GitHub and check that you have three branches.\nIn GitHub you can ask for a pull request",
+    "crumbs": [
+      "Workflow",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Git Branching Workflow</span>"
+    ]
+  },
+  {
+    "objectID": "BranchingWorkflow.html#workflow-2-merge-branches-first-remotely-and-then-pull-recommened",
+    "href": "BranchingWorkflow.html#workflow-2-merge-branches-first-remotely-and-then-pull-recommened",
+    "title": "9  Git Branching Workflow",
+    "section": "9.2 Workflow 2: merge branches first remotely and then pull: recommened",
+    "text": "9.2 Workflow 2: merge branches first remotely and then pull: recommened\n\nClone the repository git clone URL\nCreate a new branch, you can use git branch BRANCH_NAME. But you can better use git checkout -b BRANC_NAME, this will create and change automatially to the new branch.\nSwitch to the new branch using git checkout BRANCH_NAME\nModify the targeted file\nCheck modifications using git status\nStage changes using git add FILE_NAME\nCommit changes using git commit -m \"Message\"\n\n7.5 Push the changes to the target branch git push -u origin Target_branch_name. This step is important to push the branch that was created to make the changes to GitHub.\n\nIn Github make a merge pull request\nApprove the merge\nPull the merge into your local repository using git checkout main and the git pull\n\nIt is better if we use continous integration, this means use Github actions to test.",
+    "crumbs": [
+      "Workflow",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Git Branching Workflow</span>"
+    ]
+  },
+  {
+    "objectID": "WorkflowExistingRepository.html",
+    "href": "WorkflowExistingRepository.html",
+    "title": "14  Workflow for an existing local repository that is synchronized with a remote repository on Github",
+    "section": "",
+    "text": "14.1 Solo work",
+    "crumbs": [
+      "Workflow",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Workflow for an existing local repository that is synchronized with a remote repository on Github</span>"
+    ]
+  },
+  {
+    "objectID": "WorkflowExistingRepository.html#solo-work",
+    "href": "WorkflowExistingRepository.html#solo-work",
+    "title": "14  Workflow for an existing local repository that is synchronized with a remote repository on Github",
+    "section": "",
+    "text": "14.1.1 Repository that was not synchronized and not updated using a proper Git wrokflow\n\n14.1.1.1 Part 1: Verify that the local repository is connected to Github, and the structure of the repository\n\nCheck that the local repository is connected to Github:\ngit remote -v\nIf it is connected, we need to see an output:\norigin https://github.com/monikavila/Github.git (fetch)\norigin https://github.com/monikavila/Github.git (push)\nCheck the current branch\ngit branch\n\n\n\n14.1.1.2 Part 2: Update repository locally and remotelly\n\nCheck status git status\nCommit local changes\ngit add . git commit -m \"Updating all the changes in one\"\nNote: Ideally, one should commit each change separately to have meaningful commit messages.\nPull changes\ngit pull\nPush changes git push\n\n\n\n\n14.1.2 Repository that is constantly synchronized\n\n14.1.2.1 Update repository locally and remotelly\n\nCheck status git status\nCommit local changes\ngit add . git commit -m \"Updating all the changes in one\"\nNote: Ideally, one should commit each change separately to have meaningful commit messages.\nPull changes\ngit pull\nPush changes git push",
+    "crumbs": [
+      "Workflow",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Workflow for an existing local repository that is synchronized with a remote repository on Github</span>"
+    ]
+  },
+  {
+    "objectID": "WorkflowExistingRepository.html#team-work",
+    "href": "WorkflowExistingRepository.html#team-work",
+    "title": "14  Workflow for an existing local repository that is synchronized with a remote repository on Github",
+    "section": "14.2 Team work",
+    "text": "14.2 Team work\n\n14.2.1 Repository that was not synchronized and not updated using a proper Git wrokflow\n\n14.2.1.1 Part 1: Verify that the local repository is connected to Github, and the structure of the repository\n\nCheck that the local repository is connected to Github:\ngit remote -v\nIf it is connected, we need to see an output:\norigin https://github.com/monikavila/Github.git (fetch)\norigin https://github.com/monikavila/Github.git (push)\nCheck the current branch\ngit branch\n\n\n\n14.2.1.2 Part 2: Update repository locally and remotelly\n\nCheck status git status\nPull changes\ngit pull\nCommit local changes\ngit add . git commit -m \"Updating all the changes in one\"\nNote: Ideally, one should commit each change separately to have meaningful commit messages.\nPush changes git push\n\n\n\n\n14.2.2 Repository that is constantly synchronized\n\n14.2.2.1 Update repository locally and remotelly\n\nCheck status git status\nPull changes\ngit pull\nCommit local changes\ngit add . git commit -m \"Updating all the changes in one\"\nNote: Ideally, one should commit each change separately to have meaningful commit messages.\nPush changes git push",
+    "crumbs": [
+      "Workflow",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Workflow for an existing local repository that is synchronized with a remote repository on Github</span>"
     ]
   }
 ]

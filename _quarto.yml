@@ -21,6 +21,8 @@ book:
       - Cloning.qmd
       - Commands.qmd
       - GitRevert.qmd
+      - WorkflowCreateGitGithubRepo.qmd
+      - WorkflowExistingRepository.qmd
     - ForkClone.qmd
     - GithubProjectManagement.qmd
     - FileReadme.qmd

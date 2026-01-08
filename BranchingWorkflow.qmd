@@ -1,5 +1,7 @@
 # Git Branching Workflow
 
+## Workflow 1: merge branches first locally and then push to the remote
+
 1.  Clone the repository `git clone URL`
 
 2.  Create a new branch, you can use `git branch BRANCH_NAME`. But you can better use `git checkout -b BRANC_NAME`, this will create and change automatially to the new branch.
@@ -27,3 +29,29 @@
 12. Now you can go to GitHub and check that you have three branches.
 
 13. In GitHub you can ask for a pull request
+
+## Workflow 2: merge branches first remotely and then pull: recommened
+
+1.  Clone the repository `git clone URL`
+
+2.  Create a new branch, you can use `git branch BRANCH_NAME`. But you can better use `git checkout -b BRANC_NAME`, this will create and change automatially to the new branch.
+
+3.  Switch to the new branch using `git checkout BRANCH_NAME`
+
+4.  Modify the targeted file
+
+5.  Check modifications using `git status`
+
+6.  Stage changes using `git add FILE_NAME`
+
+7.  Commit changes using `git commit -m "Message"`
+
+7.5 Push the changes to the target branch `git push -u origin Target_branch_name`. This step is important to push the branch that was created to make the changes to GitHub.
+
+8.  In Github make a merge pull request
+
+9.  Approve the merge
+
+10. Pull the merge into your local repository using `git checkout main` and the `git pull`
+
+It is better if we use continous integration, this means use Github actions to test.

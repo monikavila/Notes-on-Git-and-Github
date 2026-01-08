@@ -36,7 +36,7 @@
 
 17. Delete the child branch using `git branch -d name_child_branch`
 
- ![](images/Screenshot%202025-07-02%20at%2002.27.28-03.png)
+![](images/Screenshot%202025-07-02%20at%2002.27.28-03.png)
 
 Source: IBM coursera course on Introduction to Git and Github
 

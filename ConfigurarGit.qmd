@@ -1,20 +1,23 @@
 # Configurar Git
 
-1. Install Git in your computer (Set the initial configuration in your computer): 
-- In Rstudio:
-  - `install.packages("usethis")`
-  - Set your username and email: `usethis::use_git_config(user.name = "x",user.email = "x")`
-  - Configure your personal access token:             
-    - Create the token with `usethis::create_github_token()`
-    - Save the token in your computer with `gitcreds::gitcreds_set()`
-  - Vaccinate your Git installation with `usethis::git_vaccinate()`
-2. Check the initial configuration of Git in your computer.
-  - Terminal: `git config --list`
-  - R: `usethis::git_sitprep()`
-  You will need to set your user name and provide a token.  
-  The token is obtained from GitHub > Settings > Developer settings > 
-  Personal access tokens > Tokens (Classic) > Generate new token. 
-3. Different ways to interact with Git:
-- Terminal
-- GitHub desktop
-- R
+1.  Install Git in your computer (Set the initial configuration in your computer):
+
+-   In Rstudio:
+    -   `install.packages("usethis")`
+    -   Set your username and email: `usethis::use_git_config(user.name = "x",user.email = "x")`
+    -   Configure your personal access token:
+        -   Create the token with `usethis::create_github_token()`
+        -   Save the token in your computer with `gitcreds::gitcreds_set()`
+    -   Vaccinate your Git installation with `usethis::git_vaccinate()`
+
+2.  Check the initial configuration of Git in your computer.
+
+-   Terminal: `git config --list`
+-   R: `usethis::git_sitprep()` You will need to set your user name and provide a token.\
+    The token is obtained from GitHub \> Settings \> Developer settings \> Personal access tokens \> Tokens (Classic) \> Generate new token.
+
+3.  Different ways to interact with Git:
+
+-   Terminal
+-   GitHub desktop
+-   R
