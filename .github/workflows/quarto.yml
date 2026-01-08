@@ -3,7 +3,7 @@ name: Render Quarto Book
 on:
   push:
     branches:
-      - main  # Runs whenever you push to main
+      - main
 
 jobs:
   build:
@@ -13,8 +13,8 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Render Quarto book
-        uses: quarto-dev/quarto-actions@v2
+      - name: Install Quarto
+        uses: quarto-dev/quarto-actions@v2.2.0
         with:
           command: render
 
@@ -22,5 +22,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_book  # <-- your output folder
-
+          publish_dir: ./_book
