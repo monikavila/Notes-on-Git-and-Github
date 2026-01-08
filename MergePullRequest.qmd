@@ -2,13 +2,12 @@
 
 To merge a committed code into the main branch:
 
-- On Github:
+-   On Github:
 
-  -   Click Merge Pull Request
+    -   Click Merge Pull Request
 
-  -   Click Confirm merge
+    -   Click Confirm merge
 
-  -   Delete obsolete branch
-  
+    -   Delete obsolete branch
 
-- On command line: 
+-   On command line:
