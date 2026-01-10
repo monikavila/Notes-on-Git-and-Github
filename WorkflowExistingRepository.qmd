@@ -125,6 +125,9 @@
 ## Several branches
 ### Option 1: You first updated the main brannch using the workflow as the repository had only the main branch, and then you realize there are more branches
 #### The other branch is contained in the main branch
+
+##### Case 1: Main is ahead of the other branch
+
 1. List all branches `git branch -a`
 
 2. Check the commits that the other branches have and that main does not have 
@@ -156,3 +159,41 @@ If they are equal, the other branch is fully contained into the main one and it 
 
 8. Push the changes = delete remotely
     `git push origin --delete otherbranch`
+
+##### Case 2: The other branch is ahead of main
+
+1. List all branches `git branch -a`
+
+2. Check the commits that the other branches have and that main does not have 
+    `git log --oneline --graph main..otherbranch`
+     
+
+3. Check the commits that main has and the other bramches do not have
+    `git log --online --graph otherbranch..main`
+    If you do not get any output, then it means that the other branch is ahead of the main branch (The other branch has commits that are not in main).
+
+4. Confirm the differences between main and other branches
+    `git diff -stat main..otherbranch`
+
+    `git diff -stat otherbranch..main`
+
+    The differences are shown because we compare the files between different commits. 
+
+5. Now, let's verify the last common commit between main and the other branch
+
+    `git merge-base main otherbranch`
+
+6. Now, let's verify the tip of the other branch
+    
+    `git rev-parse main`
+
+If they are equal, the main is fully contained into the other branch. So we need to merge the other branch with main. 
+
+7. Change to the main branch
+    `git checkout main`
+
+8. Pull from remote (to be sure that main is up to date). Skip if the repository is only local.
+    `git pull origin main`
+
+9. Merge branches 
+    `git merge otherbranch`
